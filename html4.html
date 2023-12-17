@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="head">
+    <h1>Play Rock Paper Scissors</h1>
+    <h3>Click here to play</h3>
+  </div>
+  <input class="choice" type="text" placeholder="Enter your choice (rock, paper, or scissor)">
+  <p class="chosen">Your choice is <span class="user-choice"></span></p>
+  <div class="result"></div>
+  <div class="result-2"></div>
+  <button class="play" onclick="play()">Play Game</button>
+  <button onclick="play()">end game</button>
+  <div>computer choice is <span class="comp-choice"></span></div>
+  <div class="gameover"></div>
+
+  <script>
+    const choices = ['rock', 'paper', 'scissor'];
+
+    function getRandomChoice() {
+      const rand = Math.floor(Math.random() * choices.length);
+      return choices[rand];
+    }
+
+    function play() {
+
+      const userInput = document.querySelector('.choice').value.toLowerCase();
+      const computerChoice = getRandomChoice();
+      
+      document.querySelector('.user-choice').innerText = userInput;
+      document.querySelector('.comp-choice').innerText=computerChoice;
+
+      if (!choices.includes(userInput)) {
+        document.querySelector('.result').innerText = 'Invalid choice. Please enter rock, paper, or scissor.';
+        return;
+      }
+
+      if (userInput === computerChoice) {
+        document.querySelector('.result-2').innerText = 'Draw';
+      } else if (
+        (userInput === 'rock' && computerChoice === 'scissor') ||
+        (userInput === 'paper' && computerChoice === 'rock') ||
+        (userInput === 'scissor' && computerChoice === 'paper')
+      ) {
+        document.querySelector('.result-2').innerText = 'You won!';
+      } else {
+        document.querySelector('.result-2').innerText = 'You lost!';
+      }
+     
+    }
+  </script>
+</span<>
+</html>

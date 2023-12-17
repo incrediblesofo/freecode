@@ -1,0 +1,21 @@
+<html>
+    <head>
+     <link rel="stylesheet" href="hex.css"> 
+    </head>
+    <body>
+    <div class="container">
+        <h1>HEX COLOR CHANGER</h1>
+        <div class="hex">
+         <p>color</p>
+         <input type="color" id="colorPicker" value="#6a5acd" onclick="changecolor()">
+        </div>
+    </div>
+    
+    </body>
+    <script>
+        function changecolor(){
+            var val=document.getElementById('colorPicker').value;
+            document.body.style.background=val;
+        }
+    </script>
+</html>

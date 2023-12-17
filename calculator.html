@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="calc.css">
+    </head>
+    <body>
+     <div class="container">
+         <div class="calc">
+            <input id="we" type="text" name="display">
+            <div class="c">
+            <button onclick="append('1')">1</button >
+            <button onclick="append('2')">2</button>
+            <button onclick="append('3')">3</button >
+            <button onclick="append('4')">4</button >
+            </div>
+            <div class="c">
+            <button onclick="append('5')">5</button>
+            <button onclick="append('6')">6</button>
+            <button onclick="append('7')">7</button>
+            <button onclick="append('8')">8</button>
+             </div>
+             <div class="c">
+            <button onclick="append('9')">9</button>
+            <button onclick="append('00')">0</button>
+            <button onclick="append('00')">00</button>
+            <button onclick="val()">=</button >
+            </div>
+            <div class="c">
+            <button onclick="append('+')">+</button>
+            <button onclick="append('-')">-</button>
+            <button onclick="append('*')">*</button>
+            <button onclick="append('/')">/</button>
+            </div>
+            <div class="c">
+                <button onclick="cleartable()">C</button>
+            </div>
+         </div>
+     </div>
+    </body>
+    <script>
+        const display=document.getElementById("we");
+        function append(inp){
+            display.value+=inp;
+        }
+        function cleartable() {
+            display.value = display.value.slice(0,-1);
+        }
+        function val(){
+                display.value = eval(display.value);
+        }
+    </script>
+</html>

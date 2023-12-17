@@ -1,0 +1,17 @@
+body{
+    background-color: aqua;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-top:50px;
+}
+.container{
+    border-style:solid;
+    padding: 20px;
+    text-align: center;
+
+}
+.text{
+    justify-content:center;
+    align-items: center;
+}

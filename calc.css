@@ -1,0 +1,35 @@
+body{
+    background-color:white;
+             display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color:rgb(9, 9, 88);
+           
+            
+}
+.container{
+            border-style:solid;
+            padding: 20px;
+            background-color:red;
+            border-radius:10%;
+}
+input{
+    height:30px;
+    background-color: skyblue;
+    
+}
+.calc{
+    justify-content:center;
+    align-items:center;
+    display:grid;
+    grid-gap:10px;
+    border-style:solid;
+    background-color: aqua;
+}
+button{
+    width:40px;
+    border-radius:2px;
+    font-size:30px;
+    font-family:bold;
+    border-radius:14px;
+}

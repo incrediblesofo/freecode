@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+      <div class="head">
+        <h1> play rock paper scissor</h1>
+        <h3>click here to play</h3>
+      </div>
+      <input class="choice"type="text" placeholder="enter text here">
+      <P class="chosen">your choice is</P>
+     <div class="result"></div>
+     <div class="result-2"></div>
+     <button class="play" oneclick="play()">play game</button>
+     <div class="gameover"></div>
+    </body>
+    <script>
+      
+      const list=['rock','paper','scissor'];
+      function rand(arr){
+        const rand=Mathfloor(Math.random*arr.length);
+        const choice=arr[rand];
+        return choice;
+      }
+      const res=rand(list);
+      function play(){
+        const inp=document.querySelector('.result');
+        if (userInput === computerChoice) {
+        document.querySelector('.result-2').innerText = 'Draw';
+      } else if (
+        (userInput === 'rock' && computerChoice === 'scissor') ||
+        (userInput === 'paper' && computerChoice === 'rock') ||
+        (userInput === 'scissor' && computerChoice === 'paper')
+      ) {
+        document.querySelector('.result-2').innerText = 'You won!';
+      } else {
+        document.querySelector('.result-2').innerText = 'You lost!';
+      }
+        rl.question("Do you want to play again? Type 'yes' to continue: ", (answer) => {
+            if (answer.toLowerCase() === 'yes') {
+                let sres = rand(cont);
+                playGame();
+            } else {
+                rl.close();
+                document.queryselector('.gameover').innerHTML('Game over!');
+            }
+        });
+    };
+    </script>
+</html>
